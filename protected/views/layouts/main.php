@@ -9,9 +9,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width">
-		<meta name="description" content="Make and read anonymous confessions">
-		<meta name="keywords" content="group hug, online confession, online confessions, grouphug">
-		<title>Grouphug.io &raquo; Anonymous Online Confessions</title>
+		<meta name="description" content="Read anonymous confessions posted by users just like you. Have something to confess? Feel free to post your anonymous confession here!">
+		<meta name="keywords" content="confess.io, online confession, online confessions, anonymous online confessions, anonymous online confession, confess">
+		<title>Confess.io &raquo; Anonymous Online Confessions</title>
 		<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/foundation.min.css">
 		<link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" />
 		<link rel="apple-touch-icon" href="<?php echo Yii::app()->request->baseUrl; ?>/touch-icon-iphone.png" />
@@ -66,9 +66,9 @@
 					<div class="row">
 						<div class="seven columns right">
 							<p>
-								<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://grouphug.io/confessions" data-text="Check out this site" data-via="GroupHugIO">Tweet</a>
+								<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://confess.io" data-text="Check out this site" data-via="Confess_IO">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><br>
-								grouphug.io — made with love by: <a href="http://twitter.com/_connyay" target="_blank">@_connyay</a>
+								confess.io — made with love by: <a href="http://twitter.com/_connyay" target="_blank">@_connyay</a>
 							</p>
 						</div>
 					</div>
