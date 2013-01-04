@@ -1,0 +1,16 @@
+/* Me */     
+Your title: Connor Hindley                    
+Site: connorhindley.com
+Twitter: @_connyay
+Location: Chicago, IL
+              
+/* THANKS */
+Name: The former grouphug.us for the great 9 years
+                         
+/* SITE */
+
+Last update: 2012/12/04  
+Standards: HTML5, CSS3,..
+Language: PHP
+Components: ZURB Foundation, Yii, Modernizr, jQuery
+Software: Sublime Text 2 & MySQL Workbench

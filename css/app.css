@@ -1,0 +1,47 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+dl.tabs.pill dd.shrug a  {
+	background-color: #FF4500 !important;
+	color:#FFF;
+}
+dl.tabs.pill dd.hug a  {
+	background-color: #2BA6CB !important;
+	color:#FFF;
+}
+footer iframe {
+	vertical-align: middle;
+}
+.GHSearch{
+	height: 30px !important;
+	margin-top: 10px !important;
+	float: right;
+}
+.list-view .pager {
+	margin-top: 80px !important;
+}
+
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+

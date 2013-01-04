@@ -1,0 +1,103 @@
+$doVote = "
+var doVote = function(event, id, vote, elem) {
+    event.preventDefault();
+$.ajax({
+  type: 'POST',
+  url: window.location.pathname + '?r=votes/ajax',
+  data: {'id' : id, 'vote' : vote, 'api' : 'lolwat'},
+  success: function(data) {
+  	var votes = parseInt(elem.innerHTML, 10);
+
+  	if (votes === 0) {
+  		if (vote === 1) {
+			elem.innerHTML = '1 Hug';
+  		} 
+  		if (vote === -1) {
+  			elem.innerHTML = '1 Shrug';
+  		}
+  	} else {
+  		votes += 1;
+  		if (vote === 1) {
+			elem.innerHTML = votes + ' Hugs';
+  		} 
+  		if (vote === -1) {
+  			elem.innerHTML = votes + ' Shrugs';
+  		}
+  	}
+  }
+});
+
+}
+
+$('.hug-tab, .shrug-tab').click(function(event) {
+	if (!$(this.parentNode).hasClass('active'))
+  		doVote(event, $(this).data('id'), $(this).data('v'), this );
+	});
+";
+
+$launchModal = "
+$('#confessionBox').focus();
+
+var showDialog = function(event) {
+    event.preventDefault();
+  	$('#createModal').reveal();
+  	$('#confirm').focus();
+}
+$('#confessionBox').keyup(function(event) {
+	console.log('wat');
+    if($('#confessionBox').val() === '') {
+    	$('#submitBtn').attr('disabled', 'disabled');
+    } else {
+    	$('#submitBtn').removeAttr('disabled');
+    }
+});
+$('#confirm').click(function(event) {
+  	showDialog(event);
+  	$('#confirm').attr('disabled', 'disabled');
+  	 $('#confessions-form').unbind('submit').submit();
+	});
+$('#formatting').click(function(event) {
+	event.preventDefault();
+	$('#formatModal').reveal();
+});
+$('#confessions-form').submit(function(event) {
+  	showDialog(event);
+	});";
+
+
+var doVote = function(event, id, vote, elem) {
+    event.preventDefault();
+$.ajax({
+  type: 'POST',
+  url: window.location.pathname + '?r=votes/ajax',
+  data: {'id' : id, 'vote' : vote, 'api' : 'lolwat'},
+  success: function(data) {
+    if (data === 'nope') {
+      return;
+    }
+    var votes = parseInt(elem.innerHTML, 10);
+    if (votes === 0) {
+      if (vote === 1) {
+      elem.innerHTML = '1 Hug';
+      } 
+      if (vote === -1) {
+        elem.innerHTML = '1 Shrug';
+      }
+    } else {
+      votes += 1;
+      if (vote === 1) {
+      elem.innerHTML = votes + ' Hugs';
+      } 
+      if (vote === -1) {
+        elem.innerHTML = votes + ' Shrugs';
+      }
+    }
+  }
+});
+
+}
+
+$('.hug-tab, .shrug-tab').click(function(event) {
+  if (!$(this.parentNode).hasClass('active'))
+      doVote(event, $(this).data('id'), $(this).data('v'), this );
+  });
