@@ -51,7 +51,7 @@ class VotesController extends ERestController
 		if(isset($_SERVER['HTTP_X_FORWARDED_VARNISH'])) {
 			$ip = $_SERVER["HTTP_X_FORWARDED_VARNISH"];
 		} else {
-		$ip = CHttpRequest::getUserHostAddress();
+		$ip = Yii::app()->request->userHostAddress;
 		}
 
 
