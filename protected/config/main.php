@@ -54,7 +54,7 @@ return array(
 			'transportType'=>'smtp',
 			'transportOptions'=>array(
 				'host'=>'smtp.gmail.com',
-				'username'=>'cjh.confess.io@gmail.com', // change
+				'username'=>'hello_github@fakemail.com', // change
 				'password'=>'HELLO_GITHUB', // change
 				'port'=>'465',
 				'encryption'=>'ssl',
@@ -70,10 +70,9 @@ return array(
 			'coreScriptPosition' => CClientScript::POS_END,
 			'scriptMap' => array(
 				'jquery.js' => false,
+				'jquery.min.js' => false,
 			)
 		),
-
-		// uncomment the following to enable URLs in path-format
 
 		'urlManager'=>array(
 			'urlFormat'=>'path',
@@ -81,8 +80,6 @@ return array(
 			'caseSensitive'=>false,
 			'rules'=>require(dirname(__FILE__).'/../extensions/restfullyii/config/routes.php'),
 		),
-
-		// uncomment the following to use a MySQL database
 
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=yii_grouphug',
@@ -113,20 +110,11 @@ return array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
 				),
-				// uncomment the following to show log messages on web pages
-				/*
-				array(
-					'class'=>'CWebLogRoute',
-				),
-				*/
 			),
 		),
 	),
 
-	// application-level parameters that can be accessed
-	// using Yii::app()->params['paramName']
 	'params'=>array(
-		// this is used in contact page
-		'adminEmail'=>'cjh.confess.io@gmail.com', // change
+		'adminEmail'=>'hello_github@fakemail.com', // change
 	),
 );
