@@ -147,8 +147,8 @@ class Confessions extends CActiveRecord
 	public function afterSave() {
 		parent::afterSave();
 		// TODO: Remove hard coded URI
-		$body = "Here is the new post: " . $this->confession
-			. "<br><br>http://grouphug.io/confessions/approve/id/".$this->link."/pass/".$this->pass;
+		$body = "<p>Here is the new post: " . $this->confession
+			. "</p><p>". Yii::app()->createAbsoluteUrl('/confessions/approve',array('id'=>$this->link, 'pass'=>$this->pass)) ."</p>";
 
 		Yii::import( 'ext.yii-mail.YiiMailMessage' );
 		$message = new YiiMailMessage;

@@ -102,15 +102,14 @@ class Comments extends CActiveRecord
 		parent::afterSave();
 		if ( $this->status != 1 ) {
 			$this->isNewRecord = false;
-			// TODO: Remove hard coded URI
-			$body = "Here is the new comment: " . $this->text
-				. "<br><br>http://grouphug.io/comments/approve/id/".$this->id."/pass/".$this->pass;
+		$body = "<p>Here is the new comment: " . $this->text
+			. "</p><p>". Yii::app()->createAbsoluteUrl('/comments/approve',array('id'=>$this->id, 'pass'=>$this->pass)) ."</p>";
 
 			Yii::import( 'ext.yii-mail.YiiMailMessage' );
 			$message = new YiiMailMessage;
 			$message->setBody( $body, 'text/html' );
 			$message->subject = 'New Comment';
-			$message->addTo( 'grouphug.io@gmail.com' );
+			$message->addTo( Yii::app()->params['adminEmail'] );
 			$message->from = Yii::app()->params['adminEmail'];
 			Yii::app()->mail->send( $message );
 		}

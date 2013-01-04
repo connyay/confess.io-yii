@@ -1,8 +1,7 @@
 <?php
 /* @var $this ConfessionsController */
 /* @var $model Confessions */
-$doVote = 'var doVote=function(e,t,n,r){$.ajax({type:"POST",url:"/confessions?r=votes/ajax",data:{id:t,vote:n,api:"supercereal"},success:function(e){if(e!=="gtfo"){var t=parseInt(r.innerHTML,10);if(t===0){if(n===1){r.innerHTML="1 Hug"}if(n===-1){r.innerHTML="1 Shrug"}}else{t+=1;if(n===1){r.innerHTML=t+" Hugs"}if(n===-1){r.innerHTML=t+" Shrugs"}}}}})};$(".hug-tab, .shrug-tab").click(function(e){e.preventDefault();if(!$(this.parentNode).hasClass("active"))doVote(e,$(this).data("id"),$(this).data("v"),this)})';
-
+$doVote = 'var doVote=function(e,t,n,r){$.ajax({type:"POST",url:"'.Yii::app()->createAbsoluteUrl('/votes/ajax').'",data:{id:t,vote:n,api:"supercereal"},success:function(e){if(e!=="gtfo"){var t=parseInt(r.innerHTML,10);if(t===0){if(n===1){r.innerHTML="1 Hug"}if(n===-1){r.innerHTML="1 Shrug"}}else{t+=1;if(n===1){r.innerHTML=t+" Hugs"}if(n===-1){r.innerHTML=t+" Shrugs"}}}}})};$(".hug-tab, .shrug-tab").click(function(e){e.preventDefault();if(!$(this.parentNode).hasClass("active"))doVote(e,$(this).data("id"),$(this).data("v"),this)})';
 Yii::app()->clientScript->registerScript( 'doVote', $doVote, CClientScript::POS_READY );
 $this->breadcrumbs=array(
 	'Confessions'=>array( 'index' ),
