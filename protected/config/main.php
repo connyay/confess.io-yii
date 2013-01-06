@@ -85,8 +85,8 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=yii_grouphug',
 			'class'=>'CDbConnection',
 			'emulatePrepare' => true,
-			'username' => 'ze_db_admin', // change
-			'password' => 'HELLO_GITHUB', // change
+			'username' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
 		),
@@ -94,8 +94,8 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=information_schema',
 			'class'=>'CDbConnection',
 			'emulatePrepare' => true,
-			'username' => 'ze_db_admin', // change
-			'password' => 'HELLO_GITHUB', // change
+			'username' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 
