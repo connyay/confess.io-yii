@@ -35,7 +35,7 @@ return array(
 			'registrationUrl' => array( '/user/registration' ),
 			'recoveryUrl' => array( '/user/recovery' ),
 			'loginUrl' => array( '/user/login' ),
-			'returnUrl' => array( '/tasks' ),
+			'returnUrl' => array( '/admin' ),
 			'returnLogoutUrl' => array( '/user/login' ),
 		),
 
