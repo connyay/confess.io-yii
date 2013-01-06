@@ -154,7 +154,7 @@ class Confessions extends CActiveRecord
 			$message = new YiiMailMessage;
 			$message->setBody( $body, 'text/html' );
 			$message->subject = 'New Post // ' . $this->link;
-			$message->addTo( 'grouphug.io@gmail.com' );
+			$message->addTo( Yii::app()->params['adminEmail'] );
 			$message->from = Yii::app()->params['adminEmail'];
 			Yii::app()->mail->send( $message );
 		}
