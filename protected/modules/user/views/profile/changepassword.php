@@ -4,9 +4,6 @@ $this->breadcrumbs=array(
 	UserModule::t("Change Password"),
 );
 $this->menu=array(
-	((UserModule::isAdmin())
-		?array('label'=>UserModule::t('Manage Users'), 'url'=>array('/user/admin'))
-		:array()),
     array('label'=>UserModule::t('View Profile'), 'url'=>array('/user/profile')),
     array('label'=>UserModule::t('Edit Profile'), 'url'=>array('edit')),
     array('label'=>UserModule::t('Logout'), 'url'=>array('/user/logout')),
