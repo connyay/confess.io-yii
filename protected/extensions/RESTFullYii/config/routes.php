@@ -17,4 +17,5 @@
 		's/'=>'confessions/index',
 		's/<id:\w+>'=>'confessions/view',
 		'' => 'confessions/index',
+		'about' => 'site/about',
 	  );

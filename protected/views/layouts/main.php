@@ -41,9 +41,9 @@
 
 				<?php $this->widget( 'foundation.widgets.FounNavBar', array(
 					'items'=>array(
-					  array( 'label'=>'Home', 'url'=>array( 'site/index' ) ),
+					  array( 'label'=>'About', 'url'=>array( 'site/about' ) ),
 					  array( 'label'=>'Confessions', 'hasDropdown'=>true, 'url'=>array( '' ), 'submenu' => array(
-						  array( 'label'=>'View', 'url'=>array( '/confessions' ) ),
+						  array( 'label'=>'View', 'url'=>array( '/ns' ) ),
 						  array( 'label'=>'Write', 'url'=>array( '/confessions/create' ) ),
 						),
 					  ),
