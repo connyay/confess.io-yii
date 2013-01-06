@@ -126,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 --
 
 INSERT INTO `tbl_users` (`id`, `username`, `password`, `email`, `activkey`, `create_at`, `lastvisit_at`, `superuser`, `status`, `twid`) VALUES
-(1, 'admin', '0cca1606639f93f6833457284b4210a6baadb302', 'hello_github@fakemail.com', '0cca1606639f93f6833457284b4210a6baadb302', '2012-11-10 17:49:15', '2012-12-03 15:58:34', 1, 1, NULL);
+(1, 'admin', '9d92b84ce96751bb265abd10f08746f7144e1e90', 'hello_github@fakemail.com', '9d92b84ce96751bb265abd10f08746f7144e1e90', '2012-11-10 17:49:15', '2012-12-03 15:58:34', 1, 1, NULL);
 
 
 -- --------------------------------------------------------
