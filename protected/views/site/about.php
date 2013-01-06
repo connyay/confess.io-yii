@@ -12,7 +12,7 @@ $this->pageTitle=Yii::app()->name;
 
 <h4>What does <?php echo CHtml::encode(Yii::app()->name); ?> know about me?</h4>
 
-<p><b>If you post / read confessions:</b> absolutley nothing. We don't attach cookies, log your ip address, etc. Truely is 100% anonymous.</p>
+<p><b>If you post / read confessions:</b> absolutely nothing. We don't attach cookies, log your ip address, etc. Truly is 100% anonymous.</p>
 
 <p><b>If you hug / shrug confessions:</b> your ip address. We had to log IP addresses for voting to make sure people aren't voting many times on the same post.</p>
 
