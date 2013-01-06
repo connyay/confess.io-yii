@@ -1,7 +1,7 @@
 Confess.io - Anonymous Online Confessions
 ==
 
-http://www.confess.io
+http://confess.io
 
 Confess.io is built with:
 ==
