@@ -1,8 +1,8 @@
 
--- Database: `yii_grouphug`
+-- Database: `yii_confess`
 --
-CREATE DATABASE `yii_grouphug` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `yii_grouphug`;
+CREATE DATABASE `yii_confess` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `yii_confess`;
 
 -- --------------------------------------------------------
 
@@ -38,6 +38,11 @@ CREATE TABLE IF NOT EXISTS `tbl_confessions` (
   UNIQUE KEY `SHORT` (`link`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=176 ;
 
+--
+-- Dumping data for table `tbl_confessions`
+--
+INSERT INTO `tbl_confessions` (`id`, `link`, `confession`, `status`, `pass`) VALUES
+(1, 'qwert', 'test', 0, 'qwerty');
 
 --
 -- Table structure for table `tbl_profiles`
@@ -55,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `tbl_profiles` (
 --
 
 INSERT INTO `tbl_profiles` (`user_id`, `lastname`, `firstname`) VALUES
-(1, 'Admin', 'Admin'),
+(1, 'Admin', 'Admin');
 
 -- --------------------------------------------------------
 
