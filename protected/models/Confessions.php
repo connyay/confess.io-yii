@@ -146,17 +146,18 @@ class Confessions extends CActiveRecord
 	}
 	public function afterSave() {
 		parent::afterSave();
-		// TODO: Remove hard coded URI
-		$body = "<p>Here is the new post: " . $this->confession
-			. "</p><p>". Yii::app()->createAbsoluteUrl('/confessions/approve',array('id'=>$this->link, 'pass'=>$this->pass)) ."</p>";
+		if($this->isNewRecord) {
+			$body = "<p>Here is the new post: " . $this->confession
+				. "</p><p>". Yii::app()->createAbsoluteUrl('/confessions/approve',array('id'=>$this->link, 'pass'=>$this->pass)) ."</p>";
 
-		Yii::import( 'ext.yii-mail.YiiMailMessage' );
-		$message = new YiiMailMessage;
-		$message->setBody( $body, 'text/html' );
-		$message->subject = 'New Post // ' . $this->link;
-		$message->addTo( 'grouphug.io@gmail.com' );
-		$message->from = Yii::app()->params['adminEmail'];
-		Yii::app()->mail->send( $message );
+			Yii::import( 'ext.yii-mail.YiiMailMessage' );
+			$message = new YiiMailMessage;
+			$message->setBody( $body, 'text/html' );
+			$message->subject = 'New Post // ' . $this->link;
+			$message->addTo( 'grouphug.io@gmail.com' );
+			$message->from = Yii::app()->params['adminEmail'];
+			Yii::app()->mail->send( $message );
+		}
 	}
 }
 // http://blog.kevburnsjr.com/php-unique-hash
