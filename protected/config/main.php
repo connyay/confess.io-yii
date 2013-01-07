@@ -82,7 +82,7 @@ return array(
 		),
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=yii_grouphug',
+			'connectionString' => 'mysql:host=localhost;dbname=yii_confess',
 			'class'=>'CDbConnection',
 			'emulatePrepare' => true,
 			'username' => 'root',
@@ -116,5 +116,6 @@ return array(
 
 	'params'=>array(
 		'adminEmail'=>'hello_github@fakemail.com', // change
+		'dbName'=>'yii_confess',
 	),
 );

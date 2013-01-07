@@ -131,7 +131,7 @@ class Confessions extends CActiveRecord
 			$nextID = Yii::app()->ai->createCommand()
 			->select( 'auto_increment' )
 			->from( 'tables' )
-			->where( 'table_name=:table_name AND table_schema=:table_schema', array( ':table_name'=>'tbl_confessions', ':table_schema'=>'yii_grouphug' ) )
+			->where( 'table_name=:table_name AND table_schema=:table_schema', array( ':table_name'=>'tbl_confessions', ':table_schema'=>Yii::app()->params['dbName'] ) )
 			->queryRow();
 			$nextID = $nextID['auto_increment'];
 			$hash = PseudoCrypt::udihash( $nextID );
