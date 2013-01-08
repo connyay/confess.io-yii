@@ -100,7 +100,7 @@ class Comments extends CActiveRecord
 	}
 	public function afterSave() {
 		parent::afterSave();
-		if ( $this->status != 1 ) {
+		if ( $this->status != 1 && Yii::app()->params['sendEmail'] ) {
 			$this->isNewRecord = false;
 		$body = "<p>Here is the new comment: " . $this->text
 			. "</p><p>". Yii::app()->createAbsoluteUrl('/comments/approve',array('id'=>$this->id, 'pass'=>$this->pass)) ."</p>";

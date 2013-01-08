@@ -146,7 +146,7 @@ class Confessions extends CActiveRecord
 	}
 	public function afterSave() {
 		parent::afterSave();
-		if($this->isNewRecord) {
+		if($this->isNewRecord && Yii::app()->params['sendEmail']) {
 			$body = "<p>Here is the new post: " . $this->confession
 				. "</p><p>". Yii::app()->createAbsoluteUrl('/confessions/approve',array('id'=>$this->link, 'pass'=>$this->pass)) ."</p>";
 

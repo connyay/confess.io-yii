@@ -117,5 +117,6 @@ return array(
 	'params'=>array(
 		'adminEmail'=>'hello_github@fakemail.com', // change
 		'dbName'=>'yii_confess',
+		'sendEmail'=>false,
 	),
 );
