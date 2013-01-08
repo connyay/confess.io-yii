@@ -1,6 +1,7 @@
 Install / Setup
 ---------------
 
+*(I have installed on windows / mac / linux using these general steps)*
 
 1) Clone / fork repo. 
 
