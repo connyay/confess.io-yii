@@ -2,12 +2,12 @@
 
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} ^grouphug.io [NC]
-RewriteCond %{HTTP_HOST} !^grouphug.io$ [NC]
-RewriteRule ^(.*)$ http://confess.io/$1 [L,R=301]
+# RewriteCond %{HTTP_HOST} ^grouphug.io [NC]
+# RewriteCond %{HTTP_HOST} !^grouphug.io$ [NC]
+# RewriteRule ^(.*)$ http://confess.io/$1 [L,R=301]
 
-RewriteCond %{HTTP_HOST} !^confess.io$ [NC]
-RewriteRule ^(.*)$ http://confess.io/$1 [L]
+# RewriteCond %{HTTP_HOST} !^confess.io$ [NC]
+# RewriteRule ^(.*)$ http://confess.io/$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
