@@ -31,7 +31,7 @@ class ConfessionsController extends ERestController
 	public function _accessRules() {
 		return array(
 			array( 'allow',
-				'actions'=>array( 'restList', 'restView', 'restCreate', 'index', 'view', 'create', 'write', 'approve' ),
+				'actions'=>array( 'restList', 'restView', 'index', 'view', 'create', 'write', 'approve' ),
 				'users'=>array( '*' ),
 			),
 			array( 'allow',
