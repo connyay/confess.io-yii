@@ -66,7 +66,7 @@ class Confessions extends CActiveRecord
 			'hugCount' => array( self::STAT, 'Votes', 'confession_id', 'condition'=>'vote=1' ),
 			'shrugCount' => array( self::STAT, 'Votes', 'confession_id', 'condition'=>'vote=-1' ),
 			// Comment relation and stats
-			'comments' => array( self::HAS_MANY, 'Comments', 'confession_id', 'condition'=>'comments.status=1' ),
+			'comments' => array( self::HAS_MANY, 'Comments', 'confession_id' ),
 			'commentCount' => array( self::STAT, 'Comments', 'confession_id', 'condition'=>'status=1' ),
 		);
 	}

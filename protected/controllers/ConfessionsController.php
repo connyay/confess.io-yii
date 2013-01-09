@@ -235,12 +235,10 @@ class ConfessionsController extends ERestController
 
 	public function doRestView( $id ) {
 		$criteria = new CDbCriteria();
-		$criteria=array(
-			'select'=>'id, link, confession, date' );
-
+		$criteria=array( 'select'=>'id, link, confession, date, status' );
 		$this->outputHelper(
 			'Record Retrieved Successfully',
-			$this->getModel()->with(array( 'votes'=>array( 'select'=>'vote' ), 'comments'=>array( 'select'=>'text, date, status', 'condition'=>'comments.status=1' ) ) )->findByPk( $id, $criteria ),
+			$this->getModel()->with( array( 'votes'=>array( 'select'=>'vote' ), 'comments'=>array( 'select'=>'text, date, status' ) ) )->findByPk( $id, $criteria ),
 			1
 		);
 	}
